@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Quiz App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 Interactive Quiz App</h1>
+
+<!-- LOGIN / SIGNUP -->
+<div id="authBox">
+
+<div id="loginBox">
+<h2>Login</h2>
+
+<input type="text" id="loginUser" placeholder="Username">
+<input type="password" id="loginPass" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p>Don't have account?</p>
+<button onclick="showSignup()">Sign Up</button>
+
+</div>
+
+
+<div id="signupBox" class="hidden">
+<h2>Sign Up</h2>
+
+<input type="text" id="signupUser" placeholder="Username">
+<input type="password" id="signupPass" placeholder="Password">
+
+<button onclick="signup()">Create Account</button>
+
+<p>Already have account?</p>
+<button onclick="showLogin()">Login</button>
+
+</div>
+
+</div>
+
+<!-- QUIZ SECTION -->
+
+<div id="quizBox" class="hidden">
+
+<div class="topBar">
+<span id="welcomeUser"></span>
+<button onclick="logout()">Logout</button>
+</div>
+
+<h2 id="categoryTitle">Quiz</h2>
+
+<div class="categorySelect">
+<button onclick="startQuiz('html')">HTML Quiz</button>
+<button onclick="startQuiz('css')">CSS Quiz</button>
+<button onclick="startQuiz('js')">JavaScript Quiz</button>
+</div>
+
+<div id="quizArea" class="hidden">
+
+<div id="question"></div>
+
+<div id="options"></div>
+
+<input type="text" id="textAnswer" class="hidden" placeholder="Type your answer">
+
+<button id="submitBtn" onclick="submitAnswer()">Submit</button>
+
+<div id="feedback"></div>
+
+<button id="nextBtn" class="hidden" onclick="nextQuestion()">Next</button>
+
+<div id="scoreBoard"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
